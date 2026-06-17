@@ -6,13 +6,13 @@ include:
   - component: $CI_SERVER_FQDN/components/docker/config-docker-nr@~latest
     inputs:
       as: "docker-lint"
-      local_path: "deployments/dev-1-vm-1"
+      local_path: "deployments/dev-2-vm-1"
   - component: $CI_SERVER_FQDN/components/docker/deploy-nr@~latest
     inputs:
-      as: "dev-1-vm-1-deploy"
-      local_path: "deployments/dev-1-vm-1"
-      remote_host: "dev-1-vm.margusm.dev"
+      as: "dev-2-vm-1-deploy"
+      local_path: "deployments/dev-2-vm-1"
+      remote_host: "dev-2-vm.margusm.dev"
       remote_user: "margus"
-      remote_path: "deployments/grafana-dev-1-vm-1"
+      remote_path: "deployments/grafana-dev-2-vm-1"
 
 

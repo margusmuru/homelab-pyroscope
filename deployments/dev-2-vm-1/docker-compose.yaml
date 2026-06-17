@@ -2,7 +2,7 @@
 services:
   pyroscope:
     image: docker.io/grafana/pyroscope:2.1.0
-    container_name: pyroscope-dev-1-vm-1
+    container_name: pyroscope-dev-2-vm-1
     ports:
       - "4040:4040"
     volumes:
