@@ -13,7 +13,7 @@ Grafana Pyroscope is an open-source continuous profiling backend that collects, 
 
 | Deployment           | Location  | Tags                        | Status       | Url                                                              |
 | -------------------- | --------- | --------------------------- | ------------ | ---------------------------------------------------------------- |
-| pyroscope-dev-2-vm-1 | dev-2-vm  | ![icon](.attachments/d.png) | **inactive** | https://pyroscope.margusm.dev/<br>http://192.168.40.112:4040<br> |
+| pyroscope-dev-1-vm-1 | dev-1-vm  | ![icon](.attachments/d.png) | **inactive** | https://pyroscope.margusm.dev/<br>http://192.168.40.111:4040<br> |
 
 # References
 - ![icon](.attachments/github-icon.png)  [Github mirror](https://github.com/margusmuru/homelab-pyroscope)
