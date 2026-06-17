@@ -2,7 +2,7 @@ stages:
   - test
   - deploy
 
-grafana-dev-1-vm-1:
+grafana-dev-2-vm-1:
   trigger:
     include:
       - local: deployments/dev-2-vm-1/.gitlab-ci.yml
