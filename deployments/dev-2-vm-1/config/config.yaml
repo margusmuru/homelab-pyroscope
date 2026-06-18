@@ -1,0 +1,16 @@
+# Single anonymous tenant - multitenancy is disabled by default.
+
+server:
+  http_listen_port: 4040
+
+pyroscopedb:
+  # Local block storage. Maps to the pyroscope-data volume.
+  data_path: /data
+  # How long a block stays open before it is flushed to disk.
+  max_block_duration: 1h
+
+limits:
+  # Data retention. Enforced by the compactor: blocks older than this are deleted.
+  # This is a per-tenant limit (single anonymous tenant here).
+  # Default is 0s, which keeps data forever.
+  compactor_blocks_retention_period: 720h # 30 days

@@ -3,22 +3,25 @@ services:
   pyroscope:
     image: docker.io/grafana/pyroscope:2.1.0
     container_name: pyroscope-dev-2-vm-1
+    command: "-config.file=/etc/pyroscope/config.yaml"
     ports:
       - "4040:4040"
     volumes:
+      - ./config/config.yaml:/etc/pyroscope/config.yaml:ro
       - pyroscope-data:/data
       - pyroscope-compactor:/data-compactor
       - pyroscope-metastore:/data-metastore
     restart: unless-stopped
     networks:
-      - monitoring
+      - grafana
 
 networks:
-  monitoring:
-    name: monitoring
+  grafana:
+    name: grafana
     driver: bridge
+    external: true
     attachable: true
-    
+
 volumes:
   pyroscope-data:
     driver: local

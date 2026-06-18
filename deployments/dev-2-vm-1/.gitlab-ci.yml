@@ -1,5 +1,6 @@
 stages:
   - test
+  - config
   - deploy
 
 include:
@@ -7,6 +8,13 @@ include:
     inputs:
       as: "docker-lint"
       local_path: "deployments/dev-2-vm-1"
+  - component: $CI_SERVER_FQDN/components/docker/config-dir-copy-nr@~latest
+    inputs:
+      as: "dev-2-vm-1-config"
+      config_path: "deployments/dev-2-vm-1/config"
+      remote_host: "dev-2-vm.margusm.dev"
+      remote_user: "margus"
+      remote_config_path: "deployments/pyroscope-dev-2-vm-1/config"
   - component: $CI_SERVER_FQDN/components/docker/deploy-nr@~latest
     inputs:
       as: "dev-2-vm-1-deploy"
